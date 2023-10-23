@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "hapboo",
+	"version": "${version}",
+	"name": "HAPBOO!",
+	"description": "HAPBOO!",
+	"authors": [
+		"HAPBOO!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hapboo/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.talkingpanda.Hapboo"
+		],
+		"client": [
+			"org.talkingpanda.HapbooClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "hapboo.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.23",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+
+}
