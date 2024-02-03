@@ -33,7 +33,7 @@ public class HapbooMixin {
 	@Inject(cancellable = true, method = "draw", at = @At("HEAD"))
 	void draw(DrawContext context, int x, int y, Identifier textureId,CallbackInfo ci) {
 
-		if( textureId.equals(HapbooClient.hapbooidentifier)){
+		if( textureId.equals(HapbooClient.HAPBOO[hapbooindex])){
 			// HAPBOOOOO
 			if(timeDeltaSinceLastFrame >= HapbooClient.hapbooframetime) {
 				hapbooindex = hapbooindex + 1 > HapbooClient.HAPBOO.length-1 ? 0 : hapbooindex+1;
